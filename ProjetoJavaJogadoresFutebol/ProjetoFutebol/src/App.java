@@ -9,7 +9,7 @@ public class App {
     static ArrayList<Defensor> listaDefensores = new ArrayList<>();
     static ArrayList<Goleiro> listaGoleiros = new ArrayList<>();
     static ArrayList<Time> listaTimes = new ArrayList<>();
-    
+
         @SuppressWarnings("deprecation")
         public static void main(String[] args) throws Exception {
             Locale.setDefault(new Locale("en", "US"));
@@ -163,6 +163,26 @@ public class App {
         }
         // Time
             for(int x = 0; x< 3; x++){
+                int idTime;
+                String nome;
+                String cidade;
+                String fundacao;
+                String estadio;
+
+                System.out.print("digite o id do time: ");
+                idTime = input.nextInt();
+                System.out.print("digite o nome do time: ");
+                nome = input.next();
+                System.out.print("digite a cidade do time: ");
+                cidade = input.next();
+                System.out.print("digite o ano de fundação: ");
+                fundacao = input.next();
+                System.out.print("digite a localização do estadio: ");
+                estadio = input.next();
+
+                Time time = new Time(idTime, nome, cidade, fundacao, estadio, null);
+
+                listaTimes.add(time);
 
             }
 
@@ -182,6 +202,9 @@ public class App {
             System.out.println("---- Infomações dos Defensores ----");  
             for(Defensor defensor: listaDefensores){
                 System.out.println("Nome: " + defensor.getNome());
+                System.out.println("idade: "+ defensor.getIdade());
+                System.out.println("bloqueios: "+ defensor.getBloqueios());
+                System.out.println("força fisica: "+defensor.getForcaFisica());
 
                 System.out.println("");
             }
@@ -191,6 +214,9 @@ public class App {
             System.out.println("----- Infomações dos Goleiros -----");  
             for(Goleiro goleiro: listaGoleiros){
                 System.out.println("Nome: " + goleiro.getNome());
+                System.out.println("idade: "+ goleiro.getIdade());
+                System.out.println("penaltis defendidos: "+ goleiro.getPenaltisDefendidos());
+                System.out.println("alcance: "+goleiro.getAlcance());
 
                 System.out.println("");
             }
@@ -200,6 +226,9 @@ public class App {
             System.out.println("------ Infomações dos Times -------");  
             for(Time time: listaTimes){
                 System.out.println("Nome: " + time.getNome());
+                System.out.println("Cidade: "+ time.getCidade());
+                System.out.println("Fundação: "+time.getFundacao());
+                System.out.println("Estadio: "+time.getEstadio());
 
                 System.out.println("");
             }
