@@ -3,7 +3,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import futebol.*;
 
-
 public class App {
     static ArrayList<Atacante> listaAtacantes = new ArrayList<>();
     static ArrayList<Defensor> listaDefensores = new ArrayList<>();
@@ -48,7 +47,7 @@ public class App {
                 System.out.print("qual o numero da Camisa do jogador: ");
                 num_camisa = input.nextInt();
                 System.out.println("digite a posicao que ele joga: ");
-                posicao = input.nextLine();
+                posicao = input.next();
                 System.out.print("digite os gols marcados pelo jogados: ");
                 golsMarcados = input.nextInt();
                 System.out.print("digite as assistencias do jogador: ");
@@ -144,7 +143,7 @@ public class App {
                 System.out.print("qual o numero da Camisa do jogador: ");
                 num_camisa = input.nextInt();
                 System.out.println("digite a posicao que ele joga: ");
-                posicao = input.nextLine();
+                posicao = input.next();
                 System.out.print("digite as defesas pelo jogador: ");
                 defesas = input.nextInt();
                 System.out.print("digite os penaltis Defendidos do jogador: ");

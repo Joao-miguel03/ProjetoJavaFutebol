@@ -1,6 +1,6 @@
 package futebol;
 
-public class Jogador {
+public abstract class Jogador {
     private int idJogador;
     private String nome;
     private int idade;
